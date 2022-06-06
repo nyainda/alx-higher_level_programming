@@ -1,15 +1,4 @@
 #!/usr/bin/python3
-
 def no_c(my_string):
-    final_string = ""
-
-    for chars in my_string:
-        if chars == 'c' or chars == 'C':
-            continue
-        else:
-            final_string = final_string + chars
-
-    return final_string
-
-
-
+    second_string = my_string.translate({ord(a): None for a in 'cC'})
+    return second_string
