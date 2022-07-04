@@ -1,20 +1,20 @@
 #!/usr/bin/python3
 """
-more class base
+Contains the definition of the class Square.
 """
-
 
 Rectangle = __import__('9-rectangle').Rectangle
 
 
-"""
-Square class
-"""
-
-
 class Square(Rectangle):
-    """ Square Class """
+    """Definition of class Square that inherits from class Rectangle"""
+
     def __init__(self, size):
-        """ instantiation with size """
+        """Initialise an instance of the class Square"""
+        super().integer_validator("size", size)
+        super().__init__(size, size)
         self.__size = size
-        super().__init__(self.__size, self.__size)
+
+    def area(self):
+        """Return the area of the square"""
+        return self.__size ** 2
